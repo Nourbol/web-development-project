@@ -5,19 +5,17 @@
   <link rel="icon" href="/images/logo.jpg">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="main_final.css">
+  <script type="text/javascript" 
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
 </head>
 
 <body>
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+
         <a class="navbar-brand" href="main_final.html">Logo</a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
@@ -61,11 +59,11 @@
   </div>
 
   <!-- Left and right controls -->
-  <a class="left carousel-control" href="" role="button">
+  <a class="left carousel-control" href="javascript:void(0)" data-slide="prev" role="button" >
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control" href="" role="button">
+  <a class="right carousel-control" href="javascript:void(0)" data-slide="next" role="button" >
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
@@ -85,6 +83,7 @@
     Time remaining 2 days
   </div>
 </div>
+
 <div class="bg-1">
   <div class="container">
     <h3 class="text-center">TOUR DATES</h3>
@@ -149,7 +148,7 @@
       <p><span class="glyphicon glyphicon-phone"></span>Phone: +77006807375</p>
       <p><span class="glyphicon glyphicon-envelope"></span>Email: musakhanbalzhan@gmail.com</p>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-8" id="div-contact-form">
       <div class="row">
         <div class="col-sm-6 form-group">
           <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
@@ -162,7 +161,7 @@
       <br>
       <div class="row">
         <div class="col-md-12 form-group">
-          <button class="btn pull-right" type="submit">Send</button>
+          <button class="btn pull-right" type="submit" id="contact-button">Send</button>
         </div>
       </div>
     </div>
@@ -179,5 +178,7 @@
   </a><br><br>
   <p>Made by Musakhan Balzhan and Nurbol Bektibay</p>
 </footer>
+
+<script src="main_final.js"></script>
 </body>
 </html>

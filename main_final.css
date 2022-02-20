@@ -1,42 +1,83 @@
+body {
+  background: white;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .navbar {
   margin-bottom: 0;
   background-color: #2d2d30;
   border: 0;
-  font-size: 11px ;
+  font-size: 11px;
   letter-spacing: 4px;
+  opacity: 0.9;
 }
 
 /* Add a gray color to all navbar links */
-.navbar li a, .navbar .navbar-brand {
-  color: #d5d5d5  ;
+.navbar li a,
+.navbar .navbar-brand {
+  color: #d5d5d5;
 }
 
 /* On hover, the links will turn white */
 .navbar-nav li a:hover {
-  color: #fff ;
+  color: #fff;
 }
 
 /* The active link */
 .navbar-nav li.active a {
-  color: #fff ;
-  background-color:#29292c ;
+  color: #fff;
+  background-color: #29292c;
 }
 
 /* Remove border color from the collapsible button */
 .navbar-default .navbar-toggle {
   border-color: transparent;
 }
+
+.card-header {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card-body {
+  -webkit-box-flex: 1;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+.card-footer {
+  padding: 0.75rem 1.25rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
 .bg-1 {
   background: #2d2d30;
   color: #bdbdbd;
 }
-.bg-1 h3 {color: #fff;}
-.bg-1 p {font-style: italic;}
+
+.bg-1 h3 {
+  color: #fff;
+}
+
+.bg-1 p {
+  font-style: italic;
+}
+
 .coupon {
   border: 5px dotted #bbb;
   width: 80%;
   border-radius: 15px;
   margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .promo {
@@ -52,7 +93,7 @@
 footer {
   background-color: #2d2d30;
   padding: 32px;
-  color: #f5f5f5; 
+  color: #f5f5f5;
 }
 
 footer a {
@@ -91,12 +132,13 @@ footer a:hover {
   padding: 10px 20px;
   background-color: #333;
   color: #f1f1f1;
-  border-radius: 0;
-  transition: .2s;
+  border-radius: 0.25rem;
+  transition: 0.2s;
 }
 
 /* On hover, the color of .btn will transition to white with black text */
-.btn:hover, .btn:focus {
+.btn:hover,
+.btn:focus {
   border: 1px solid #333;
   background-color: #fff;
   color: #000;

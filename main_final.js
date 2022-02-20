@@ -39,24 +39,21 @@ $(document).ready(function() {
         alert.classList.add("alert");
         alert.classList.add("alert-info");
         alert.setAttribute("role", "alert");
-        alert.setAttribute("style", "position: fixed; bottom: 0; right: 0; background-color: #2d2d30; color: #fff; border-color: #2d2d30;")
+        alert.setAttribute("style", "position: fixed; bottom: 0; right: 0; background-color: #2d2d30; color: #fff; border-color: #2d2d30; transition: opacity 1s ease-in-out;")
         alert.innerText = "Your contacts were sent!";
         document.body.appendChild(alert);
-        fade(alert);
+        $(".alert-info").fadeOut(3500);
+        for (let i = 0; i < inputArray.length; i++) {
+          inputArray[i].value = "";
+        }
       }
 
-      function fade(element) {
-        var opacity = 1;
-        var timer = setInterval(function () {
-            if (opacity <= 0.1){
-                clearInterval(timer);
-                element.style.display = 'none';
-            }
-            element.style.opacity = opacity;
-            element.style.filter = 'alpha(opacity=' + opacity * 100 + ")";
-            opacity -= opacity * 0.3;
-        }, 700);
-    }
+      let scrollButton = document.getElementsByClassName("up-arrow");
+      scrollButton[0].addEventListener("click", function() {
+        document.body.scrollIntoView({
+          behavior: "smooth",
+        });
+      });
     });
 
 

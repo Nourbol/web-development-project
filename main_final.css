@@ -89,6 +89,20 @@ h5 {
   color: red;
 }
 
+.modal-header,
+h4,
+.close {
+  background-color: #333;
+  color: #fff !important;
+  text-align: center;
+  font-size: 30px;
+}
+
+.modal-header,
+.modal-body {
+  padding: 40px 50px;
+}
+
 /* Add a dark background color to the footer */
 footer {
   background-color: #2d2d30;

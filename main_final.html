@@ -12,19 +12,17 @@
 src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
 </head>
 
-<body>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
 
-        <a class="navbar-brand" href="main_final.html">Logo</a>
+        <a class="navbar-brand" href="#myPage">Logo</a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="main_final.html">HOME</a></li>
+          <li><a href="#myPage">HOME</a></li>
           <li><a href="/clothes_f.html">CLOTHES</a></li>
-          <li><a href="">BACKSTAGE</a></li>
-          <li><a href="">PLAYLIST</a></li>
           <li><a href="#search"><span class="glyphicon glyphicon-search"></span></a></li>
         </ul>
       </div>
@@ -119,6 +117,63 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
         </div>
       </div>
     </div>
+
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              ×
+            </button>
+            <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
+          </div>
+          <div class="modal-body">
+            <form role="form">
+              <div class="form-group">
+                <label for="psw"
+                  ><span class="glyphicon glyphicon-shopping-cart"></span>
+                  Tickets, $23 per person</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="psw"
+                  placeholder="How many?"
+                />
+              </div>
+              <div class="form-group">
+                <label for="usrname"
+                  ><span class="glyphicon glyphicon-user"></span> Send
+                  To</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="usrname"
+                  placeholder="Enter email"
+                />
+              </div>
+              <button type="submit" class="btn btn-block" id="payButton">
+                Pay
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="submit"
+              class="btn btn-danger btn-default pull-left"
+              data-dismiss="modal"
+              id="closeModal"
+            >
+              <span class="glyphicon glyphicon-remove"></span> Cancel
+            </button>
+            <p>Need <a href="#">help?</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -142,7 +197,7 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
   <h3 class="text-center">Contact</h3>
   <p class="text-center"><em>We love our fans!</em></p>
 
-  <div class="row" id="#help">
+  <div class="row" id="help">
     <div class="col-md-4">
       <p>Fan? Drop a note.</p>
       <p><span class="glyphicon glyphicon-map-marker"></span> Astana , KZ</p>
@@ -168,13 +223,17 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
     </div>
   </div>
   <br>
-<!--pager-->
+  
+</div>
+
+
+
 <ul class="pager">
   <li><a href="clothes_f.html">Previous</a></li>
   <li><a href="clothes_f.html">Next</a></li>
 </ul>
 <footer class="text-center">
-  <a class="up-arrow" href="javascript:void(0)" title="TO TOP">
+  <a class="up-arrow" href="#myPage" title="TO TOP">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a><br><br>
   <p>Made by Musakhan Balzhan and Nurbol Bektibay</p>

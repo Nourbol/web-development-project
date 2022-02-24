@@ -14,8 +14,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="clothes.css" />
+    <script type="text/javascript" 
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
   </head>
-  <body>
+  <body id="myClothes" data-spy="scroll" data-target=".navbar">
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -24,14 +26,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="main_final.html">Logo</a>
+          <a class="navbar-brand" href="#myPage">Logo</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="main_final.html">HOME</a></li>
-            <li><a href="clothes_f.html">CLOTHES</a></li>
-            <li><a href="">BACKSTAGE</a></li>
-            <li><a href="">PLAYLIST</a></li>
+            <li><a href="#myPage">HOME</a></li>
+            <li><a href="#myClothes">CLOTHES</a></li>
             <li>
               <a href="#"><span class="glyphicon glyphicon-search"></span></a>
             </li>
@@ -42,8 +42,7 @@
     <br />
     <br />
     <br />
-    <!--Clothes block-->
-    <!--center item of hoodie-->
+
     <div class="card" id="card">
       <img src="/images/clothes1.jpg" alt="Мерч" style="width: 100%" />
       <h1>Boomerang hoodie</h1>
@@ -65,15 +64,73 @@
       <p>Boy black color</p>
       <button class="btn">Buy</button>
     </div>
+
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+            <h4><span class="glyphicon glyphicon-lock"></span> Clothes</h4>
+          </div>
+          <div class="modal-body">
+            <form role="form">
+              <div class="form-group">
+                <label for="psw"
+                  ><span class="glyphicon glyphicon-shopping-cart"></span>
+                  Clothes</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="psw"
+                  placeholder="How many?"
+                />
+              </div>
+              <div class="form-group">
+                <label for="username"
+                  ><span class="glyphicon glyphicon-user"></span> Send To</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  placeholder="Enter email"
+                />
+              </div>
+              <button type="submit" class="btn btn-block" id="payButton">
+                Pay
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="submit"
+              class="btn btn-danger btn-default pull-left"
+              data-dismiss="modal"
+              id="closeModal"
+            >
+              <span class="glyphicon glyphicon-remove"></span> Cancel
+            </button>
+            <p>Need <a href="main_final.html">help?</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
     <ul class="pager">
       <li><a href="main_final.html">Previous</a></li>
       <li><a href="">Next</a></li>
     </ul>
     <footer class="text-center">
-      <a class="up-arrow" href="/clothes_f.html" title="TO TOP">
+      <a class="up-arrow" href="#myClothes" title="TO TOP">
         <span class="glyphicon glyphicon-chevron-up"></span> </a
       ><br /><br />
       <p>Made by Musakhan Balzhan and Nurbol Bektibay</p>
     </footer>
+    
+    <script src="clothes.js"></script>
   </body>
 </html>

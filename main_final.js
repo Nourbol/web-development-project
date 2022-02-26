@@ -149,7 +149,8 @@ $(document).ready(function () {
 
   let audio = new Audio('cashier.mp3')
 
-  $('#payButton').click(function () {
+  $('#payButton').click(function (event) {
+    event.preventDefault();
     let count = inputArray.length;
     for (let i = 0; i < 2; i++) {
       let input = inputArray[i].value;
@@ -161,7 +162,7 @@ $(document).ready(function () {
       }
     }
 
-    if (count == 2) {
+    if (count >= 2) {
       audio.play();
       $(".modal").fadeOut("slow");
     }
